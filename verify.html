@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>National Service Scheme | NIT Jamshedpur</title>
+</head>
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/certi.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body class="container bg-secondary">
+  <div class="container bg-light py-3 rounded mt-5">
+    <div class="header text-center">
+      <h1 style="font-size: 30px"><b>NATIONAL SERVICE SCHEME</b></h1>
+    </div>
+    <div class="text-center text-info">
+      <p style="font-size: 20px"><b>NATIONAL INSTITUTE OF TECHNOLOGY JAMSHEDPUR</b></p>
+    </div>
+
+    <div class="col-lg-6 mx-auto  p-5 rounded mt-5" style="background-color: gainsboro;">
+      <center>
+        <a href="./"><b class="text-primary" style="font-size:24px"> <i class="fa fa-home"> Home</i></b>
+        </a><br><br>
+        <p style="font-size: 20px"><b>Certificate Verification Portal</b></p>
+      </center>
+      <div class="py-1">
+        <input type="text" class="form-control" id="certi_number" placeholder="Enter Certificate Number" required>
+      </div>
+      <button type="button" class="btn btn-success btn-block" onclick="checkCertificate()">Check</button>
+    </div>
+
+    <div id="response">
+
+    </div>
+
+    <br>
+    <div class="header mt-5 text-center">
+      <p style="font-size: 16px"><a href="./">NSS NITJSR</a> | <a href="webteam.html">NSS WEB TEAM</a></p>
+    </div>
+  </div>
+
+
+
+  <!--        Firebase Scripts-->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+  <script src="js/main.js"></script>
+
+
+</body>
+
+</html>

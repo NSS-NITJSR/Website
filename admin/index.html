@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+  <title>National Service Scheme | NIT Jamshedpur</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/add_certi.css">
+</head>
+
+<body class="bg-secondary">
+  <p id="heading" align="center"> <strong> <i class="fa fa-home"></i>Admin Panel</strong> </p>
+  <div class="logoutview" id="view1">
+    <form method="post" action="index.html">
+      <div class="box mt-5">
+        <h1>Dashboard</h1>
+        <input id="email" type="email" name="email" placeholder="email" class="email" />
+        <input id="pass" type="password" name="email" placeholder="password" class="email" />
+        <a onclick="login()">
+          <div class="btn">Sign In</div>
+        </a>
+      </div>
+    </form>
+  </div>
+  <div class="loginview container p-5" id="view2">
+    <a class="clickme danger text-white" id="add_notice_button">Add Notice</a>
+    <a class="clickme danger text-white" id="add_certificate_button">Add Certificate</a>
+    <a onclick="logout()" class="float-right clickme danger text-white">Log Out</a>
+    <center>
+      <!-- <b align="center" class="danger" id="user_para" style="font-size: 20px; margin-left: 10px; margin-right: 10px"> -->
+      <!-- <b>Welcome Admin!</b></p> -->
+    </center>
+    <br>
+    <div class="alert text-center bg-success p-3 text-white font-weight-bolder" id="response_alert">The Record has been
+      successfully added!</div>
+    <div class="container">
+
+      <form id="contactForm" class="col-lg-6 mx-auto">
+        <center><b style="font-size: 39px;font-weight: 800;">Issue a Certificate</b></center><br>
+        <label class="col-md-4 control-label" for="textinput0">Cert. No.</label>
+        <input id="textinput0" name="textinput0" type="text" placeholder="NITJSR/NSS/2020/CERT/XXX"
+          class="form-control input-md" required="">
+
+
+        <label class="col-md-4 control-label" for="textinput1" align="left">Name</label>
+        <input id="textinput1" name="textinput1" type="text" placeholder="Your Name" class="form-control input-md"
+          required="">
+
+        <label class="col-md-4 control-label" for="textinput2">Reg. No.</label>
+
+        <input id="textinput2" name="textinput2" type="text" placeholder="2016UGXXXX" class="form-control input-md"
+          required="">
+        <label class="col-md-4 control-label" for="selectbasic">Branch</label>
+        <select id="selectbasic" name="selectbasic" class="form-control">
+          <option selected disabled>Please Select</option>
+          <option value="1">CE</option>
+          <option value="2">CSE</option>
+          <option value="3">ECE</option>
+          <option value="4">EE</option>
+          <option value="5">ME</option>
+          <option value="6">MME</option>
+          <option value="7">PIE</option>
+          <option value="8">MCA</option>
+          <option value="9">Msc</option>
+        </select>
+
+        <label class="col-md-4 control-label" for="textinput3">Email</label>
+
+        <input id="textinput3" name="textinput3" type="text" placeholder="Email ID" class="form-control input-md">
+        <label class="col-md-4 control-label" for="textinput4">Contact No.</label>
+
+        <input id="textinput4" name="textinput4" type="text" placeholder="+91 - XXXXXXXXXX"
+          class="form-control input-md">
+
+        <input type="submit" value="Submit">&nbsp;<input type="Reset" value="Reset">
+      </form>
+      <form id="noticeform" class="col-lg-6 mx-auto">
+        <center><b style="font-size: 39px;font-weight: 800;">Push a Notice</b></center><br>
+        <label class="col-md-4 control-label" for="textinput0">Notice</label>
+        <textarea class="form-control input-md" id="notice_data" required></textarea>
+        <input type="button" class="submit-btn" value="Submit" onclick="save_notification()">&nbsp;
+        <input type="Reset" value="Reset">
+      </form>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function () {
+    $("#noticeform").hide();
+    $("#response_alert").hide();
+    $("#add_certificate_button").hide();
+
+    $("#add_notice_button").click(function () {
+      $("#contactForm").hide();
+      $("#noticeform").show();
+      $("#add_certificate_button").show();
+      $("#add_notice_button").hide();
+    });
+
+    $("#add_certificate_button").click(function () {
+      $("#contactForm").show();
+      $("#noticeform").hide();
+      $("#add_certificate_button").hide();
+      $("#add_notice_button").show();
+    });
+  });
+</script>

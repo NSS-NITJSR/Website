@@ -1,0 +1,201 @@
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #212121;
+      font-family: sans-serif;
+    }
+
+    .box {
+      width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-gap: 15px;
+      margin: 0 auto;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      height: 350px;
+      background: #fff;
+      margin: 0 auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .2);
+    }
+
+    .card:before,
+    .card:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px;
+      background: #fff;
+      transition: 0.5s;
+      z-index: -1;
+    }
+
+    .card:hover:before {
+      transform: rotate(20deg);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+    }
+
+    .card:hover:after {
+      transform: rotate(10deg);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, .2);
+    }
+
+    .card .imgBx {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      bottom: 10px;
+      right: 10px;
+      background: #222;
+      transition: 0.5s;
+      z-index: 1;
+    }
+
+    .card:hover .imgBx {
+      bottom: 80px;
+    }
+
+    .card .imgBx img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card .details {
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      height: 60px;
+      text-align: center;
+    }
+
+    .card .details h2 a {
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      font-size: 20px;
+      color: #777;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .card .details h2 span {
+      font-weight: 500;
+      font-size: 16px;
+      color: #f38695;
+      display: block;
+      margin-top: 5px;
+    }
+
+    .header {
+      background-color: black;
+      width: 100%;
+      font-family: 'Oswald', sans-serif;
+      text-align: center;
+      font-style: bold;
+      color: aliceblue;
+      margin-top: 0px;
+      font-size: 30px;
+    }
+
+    .header1 {
+      background-color: black;
+      width: 100%;
+      font-family: 'Oswald', sans-serif;
+      text-align: center;
+      font-style: bold;
+      color: aliceblue;
+      margin-top: 0px;
+      font-size: 20px;
+    }
+
+    #team {
+      font-family: 'Oswald', sans-serif;
+      margin-top: 30px;
+      color: white;
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header"><b>NATIONAL SERVICE SCHEME</b></div>
+  <div class="header">
+    <p style="font-size: 20px"><b>NATIONAL INSTITUTE OF TECHNOLOGY JAMSHEDPUR</b></p>
+  </div>
+  <center>
+    <a href="./"><b class="text-primary" style="font-size:24px"> <i class="fa fa-home"> Home</i></b>
+    </a><br><br></center>
+  <div align="center" id="team"><b>Web Team</b></div>
+  <div class="box">
+    
+    <div class="card">
+      <div class="imgBx">
+        <img src="images/team/webteam/vivek.jpg" alt="images">
+      </div>
+      <div class="details">
+        <h2><a href="http://facebook.com/vsdhruv.aarya" target="_blank">Vivek Sharma</a><br><span>Web Developer</span>
+        </h2>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+        <img src="images/team/webteam/abhishek_jnvk.jpg" alt="images">
+      </div>
+      <div class="details">
+        <h2><a href="https://www.facebook.com/abhishekjnvk" target="_blank">Abhishek</a><br><span>Web Developer</span>
+        </h2>
+      </div>
+    </div>
+    <div class="card">
+      <div class="imgBx">
+        <img src="images/team/webteam/mohit_gautam.jpg" alt="images">
+      </div>
+      <div class="details">
+        <h2><a href="https://www.facebook.com/mohit.gautam.3532" target="_blank">Mohit Gautam</a><br><span>Web
+            Developer</span></h2>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="header1">
+    <a href="webteam.html">
+      &copy;<label id="t1"></label>
+      | NSS NITJSR | NSS WEB TEAM
+    </a>
+  </div>
+
+  <script>
+    var d = new Date();
+    var n = d.getFullYear();
+    document.getElementById("t1").innerHTML = n;
+  </script>
+</body>
+
+</html>
