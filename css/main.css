@@ -10,6 +10,9 @@
     -webkit-font-smoothing: antialiased
 }
 
+#cd-img{
+    height: "550px";
+}
 body {
     margin: 0
 }
