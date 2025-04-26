@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr">
+
+<head>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <title>National Service Scheme | NIT Jamshedpur</title> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/png" href="https://placehold.co/20x20">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/uikit.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <style>
+    #mheader {
+
+      font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      color: #FFFFFF
+    }
+
+    .clickme {
+      background-color: #EEEEEE;
+      padding: 8px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .danger {
+      background-color: #FF0040;
+      color: #FFFFFF;
+    }
+
+    .danger:hover {
+      background-color: #EB003B;
+      color: #FFFFFF;
+    }
+
+    .success {
+      background-color: #00EB89;
+      color: #FFFFFF;
+    }
+
+    .success:hover {
+      background-color: #00D77E;
+      color: #FFFFFF;
+    }
+  </style>
+  <meta name="google-site-verification" content="z08MadrnGaqQ7Sa3kg6Wk-TvojZzqmTWVjovrTsnPtk" />
+</head>
+
+<body onload="loadNews()">
+  <header id="header">
+    <div data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent ; top: 600">
+      <nav class="uk-navbar-container uk-letter-spacing-small uk-text-bold border border-dark">
+        <div class="uk-container">
+          <div class="uk-position-z-index" data-uk-navbar>
+            <div class="uk-navbar-left">
+              <a class="uk-navbar-item uk-logo" href="index.html">N.S.S | NIT Jamshedpur</a>
+            </div>
+            <div class="uk-navbar-right">
+              <ul class="uk-navbar-nav uk-visible@m" data-uk-scrollspy-nav="closest: li">
+                <li><a data-uk-scroll="offset: 80" href="#header">Home</a></li>
+                <li><a data-uk-scroll="offset: 80" href="#about">About</a></li>
+                <li><a data-uk-scroll="offset: 80" href="#projects">Events</a></li>
+                <li><a data-uk-scroll="offset: 80" href="#team">Team</a></li>
+                <li><a data-uk-scroll="offset: 200" href="#contact">Contact</a></li>
+                <li><a href="verify.html">Verify Certificate</a></li>
+              </ul>
+              <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas" data-uk-toggle><span data-uk-navbar-toggle-icon></span></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="p-2 container" style="background-color:#DEF0F3">
+      <marquee scrolldelay="125" onmouseover="this.stop();" onmouseout="this.start();">
+        <b id="latest_news" title="Updated on ">Loading Latest News</b>
+      </marquee>
+    </div>
+    <div class="uk-flex uk-flex-middle" data-uk-height-viewport="offset-top: true">
+      <div class="uk-width-1-1">
+        <div class="uk-section">
+          <div class="uk-container">
+            <div class="uk-grid-large" data-uk-grid>
+              <div class="uk-width-1-2@m" data-uk-scrollspy="cls: uk-animation-slide-left-small; repeat: true; delay: 300">
+                <img src="images/intro.png" alt="Header">
+              </div>
+              <div class="uk-width-1-2@m uk-flex uk-flex-middle" data-uk-scrollspy="cls: uk-animation-slide-right-small; repeat: true; delay: 300">
+                <div>
+                  <h1 class="uk-heading-medium uk-margin-remove-top uk-letter-spacing-xl">National Service Scheme</h1>
+                  <p class="uk-text-lead uk-width-4-5@m">
+                    The motto of National Service Scheme is <b>NOT ME BUT YOU!</b></p>
+                  <div class="uk-margin-medium-top">
+                    <a href="#projects" class="uk-button uk-button-large uk-button-primary" data-uk-scroll="offset: 80" download="nssnews">Learn More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="about" class="uk-section uk-section-large uk-section-primary">
+    <div class="uk-container">
+      <div class="uk-child-width-1-2@m uk-grid-match" data-uk-grid>
+        <div>
+          <div class="uk-padding-large uk-padding-remove-left uk-padding-remove-vertical uk-flex uk-flex-column">
+            <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small">The Story So Far</h3>
+            <h2 class="uk-heading-small uk-margin-medium-top">About Us</h2>
+            <div class="uk-margin-auto-bottom">
+              <p align="justify">The National Service Scheme (NSS) is a
+                Central Sector Scheme of Government of
+                India, Ministry of Youth Affairs & Sports. The
+                NIT Jamshedpur unit of NSS consists of 200
+                Volunteers, along with a core team guided by
+                the Program Coordinator and Program
+                Officers. NSS Volunteers take part in various
+                government led community service activities
+                & programmes. <br><br>The sole aim of the NSS is to
+                provide hands on experience to young
+                students in delivering community service.
+                The NSS commitee consists of Dr. Mrutyunjay Rout as Programme Coordinator
+                accompanied by 4 Program Officers. The
+                student body is lead by Nikhil Srivastava as
+                President & Abhishek
+                Verma as vice president
+                respectively
+            </div>
+            <hr class="uk-margin-auto-top uk-separator-small">
+            <h3 class="uk-margin-remove uk-text-uppercase uk-h5 uk-letter-spacing-small"><a class="hvr-forward" href="#contact" data-uk-scroll="offset: 200">Contact<span class="uk-margin-left" data-uk-icon="arrow-right"></span></a></h3>
+          </div>
+        </div>
+        <div>
+          <div class="uk-height-1-1 uk-background-center-center uk-background-cover uk-background-norepeat uk-background-blend-overlay 
+          uk-overlay-retreat" style="background-image: url();">
+            <img class="uk-box-shadow-large" src="images/about_us.png" alt="About Us">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="facts" class="uk-section uk-section-primary- uk-section-large">
+    <div class="uk-container">
+      <div class="uk-grid-large" data-uk-grid>
+        <div class="uk-width-1-3@m">
+          <h2 class="uk-heading-small uk-margin-large-bottom">Key Facts</h2>
+          <h3 class="uk-heading-2xlarge uk-text-primary">90</h3>
+          <hr class="uk-margin-bottom uk-margin-medium-top uk-separator-small">
+          <h3 class="uk-margin-remove-bottom uk-text-uppercase uk-h5 uk-letter-spacing-small uk-margin-small-top">
+            Registered Volunteers</h3>
+        </div>
+        <div class="uk-width-expand@m uk-flex uk-flex-column">
+          <h3 class="uk-margin-auto-top uk-margin-medium-bottom"></h3>
+          <div class="uk-child-width-1-3" data-uk-grid>
+            <div>
+              <h3 class="uk-heading-xlarge">1K</h3>
+              <hr class="uk-margin-bottom uk-margin-medium-top uk-separator-small">
+              <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small uk-margin-small-top">Plantations</h3>
+            </div>
+            <div>
+              <h3 class="uk-heading-xlarge">10</h3>
+              <hr class="uk-margin-bottom uk-margin-medium-top uk-separator-small">
+              <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small uk-margin-small-top">Cloth Donation & Medical
+                Camps</h3>
+            </div>
+            <div>
+              <h3 class="uk-heading-xlarge">7</h3>
+              <hr class="uk-margin-bottom uk-margin-medium-top uk-separator-small">
+              <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small uk-margin-small-top">Seminar & Expert Talks
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="projects" class="uk-section uk-section-large uk-section-primary uk-preserve-color-">
+    <div class="uk-container">
+      <div class="uk-visible-toggle" tabindex="-1" data-uk-slider="autoplay: false">
+        <div class="uk-position-relative">
+          <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small">Things we do</h3>
+          <h2 class="uk-heading-small uk-margin-large-bottom">Our Events</h2>
+          <div class="uk-slider-container uk-box-shadow-medium uk-background-primary-light">
+            <ul class="uk-slider-items uk-child-width-1-1">
+              <li>
+                <div class="uk-grid-collapse" data-uk-grid>
+                  <div class="uk-width-1-2@s">
+                    <img src="images/cd.png" alt="Cloth Donation">
+                  </div>
+                  <div class="uk-width-expand@s uk-flex uk-flex-middle">
+                    <div class="uk-padding-large">
+                      <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small">Major Event</h3>
+                      <h2 class="uk-heading-small uk-margin-medium-top">Cloth Donation</h2>
+                      <div>
+                        <p align="justify">Every year during winters, National Service Scheme, NIT Jamshedpur
+                          organises cloth donation for the needy. On 8th March, 2019 a cloth
+                          donation event was organised by NSS in association with the Rotary
+                          Club, Jamshedpur.Students and Staffs participated in large numbers and donated their old
+                          clothes which was then distributed to the needy people with the help of
+                          Rotary Club and NSS volunteers. More than 100 people of different age
+                          groups were benefitted with this event.</p>
+                      </div>
+                      <hr class="uk-margin-medium-top uk-separator-small">
+                      <h3 class="uk-margin-remove uk-text-uppercase uk-h5 uk-letter-spacing-small">
+                        <a class="hvr-forward" href="https://www.facebook.com/nssnitjamshedpur/photos/pcb.2479049912144746/2479048318811572/?type=3&theater">View
+                          More<span class="uk-margin-left" data-uk-icon="arrow-right"></span></a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="uk-grid-collapse" data-uk-grid>
+                  <div class="uk-width-1-2@s"style="height: 550px; display: flex; aligh-items: center; justify-contents: center;">
+                    <img src="images/tp.png" alt="Slide">
+                  </div>
+                  <div class="uk-width-expand@s uk-flex uk-flex-middle">
+                    <div class="uk-padding-large">
+                      <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small">Major Event</h3>
+                      <h2 class="uk-heading-small uk-margin-medium-top">Tree Plantation</h2>
+                      <div>
+                        <p align="justify">National Service Scheme, NIT Jamshedpur organises tree plantation drive
+                          regularly in the campus with a motto of green campus. We have planted more than thousands of
+                          plants around the campus. We not only plant saplings but also ensure that they get proper
+                          nourishment.</p>
+                      </div>
+                      <hr class="uk-margin-medium-top uk-separator-small">
+                      <h3 class="uk-margin-remove uk-text-uppercase uk-h5 uk-letter-spacing-small">
+                        <a class="hvr-forward" href="https://www.facebook.com/nssnitjamshedpur/photos/pcb.2566141833435553/2566141336768936/?type=3&theater">View
+                          More<span class="uk-margin-left" data-uk-icon="arrow-right"></span></a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="uk-grid-collapse" data-uk-grid>
+                  <div class="uk-width-1-2@s">
+                    <img src="images/bd.png" alt="Slide">
+                  </div>
+                  <div class="uk-width-expand@s uk-flex uk-flex-middle">
+                    <div class="uk-padding-large">
+                      <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small">Major Event</h3>
+                      <h2 class="uk-heading-small uk-margin-medium-top">Blood Donation</h2>
+                      <div>
+                        <p align="justify">National Service Scheme, NIT Jamshedpur organises Blood Donation Camp in
+                          assosiation with the Red Cross Society for the well being of the society. We understand the
+                          importance of blood for the ones who are in trouble. This allows the people in campus to
+                          contribute their bit to the society by saving someone's life.</p>
+                      </div>
+                      <hr class="uk-margin-medium-top uk-separator-small">
+                      <h3 class="uk-margin-remove uk-text-uppercase uk-h5 uk-letter-spacing-small">
+                        <a class="hvr-forward" href="https://www.facebook.com/nssnitjamshedpur/photos/pcb.2059547824094959/2059543774095364/?type=3&theater">View
+                          More<span class="uk-margin-left" data-uk-icon="arrow-right"></span></a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="uk-grid-collapse" data-uk-grid>
+                  <div class="uk-width-1-2@s">
+                    <img src="images/sw.png" alt="Slide">
+                  </div>
+                  <div class="uk-width-expand@s uk-flex uk-flex-middle">
+                    <div class="uk-padding-large">
+                      <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small">Major Event</h3>
+                      <h2 class="uk-heading-small uk-margin-medium-top">Swachchta Drive</h2>
+                      <div>
+                        <p align="justify">To make people aware of the importance of cleanliness in their life, NSS NIT
+                          Jamshedpur monthly organises Swachchta Drives in which NSS volunteers march around the campus
+                          chanting slogans for Swachchta and cleaning the surroundings they pass in the campus.</p </div> <hr class="uk-margin-medium-top uk-separator-small">
+                        <h3 class="uk-margin-remove uk-text-uppercase uk-h5 uk-letter-spacing-small">
+                          <a class="hvr-forward" href="https://www.facebook.com/nssnitjamshedpur/photos/pcb.2302816566434749/2302812046435201/?type=3&theater">View
+                            More<span class="uk-margin-left" data-uk-icon="arrow-right"></span></a>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="uk-grid-collapse" data-uk-grid>
+                  <div class="uk-width-1-2@s">
+                    <img src="images/plog.png" alt="Slide">
+                  </div>
+                  <div class="uk-width-expand@s uk-flex uk-flex-middle">
+                    <div class="uk-padding-large">
+                      <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small">Major Event</h3>
+                      <h2 class="uk-heading-small uk-margin-medium-top">PLOG Drive</h2>
+                      <div>
+                        <p align="justify">Under the direction of Ministry of Youth Affairs & Sports, Government
+                          of India, for the awareness of SUP, National Service Scheme, NIT
+                          Jamshedpur organises a Plogging event on the occasion of Gandhi
+                          Jayanti.</p>
+                      </div>
+                      <hr class="uk-margin-medium-top uk-separator-small">
+                      <h3 class="uk-margin-remove uk-text-uppercase uk-h5 uk-letter-spacing-small">
+                        <a class="hvr-forward" href="https://www.facebook.com/nssnitjamshedpur/photos/pcb.2323452561037816/2323451731037899/?type=3&theater">View
+                          More<span class="uk-margin-left" data-uk-icon="arrow-right"></span></a>
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <div class="uk-hidden@l">
+            <a class="uk-position-center-left uk-position-small" href="#" data-uk-slidenav-previous data-uk-slider-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small" href="#" data-uk-slidenav-next data-uk-slider-item="next"></a>
+          </div>
+          <div class="uk-visible@l uk-light">
+            <a class="uk-position-center-left-out uk-slidenav-large" href="#" data-uk-slidenav-previous data-uk-slider-item="previous"></a>
+            <a class="uk-position-center-right-out uk-slidenav-large" href="#" data-uk-slidenav-next data-uk-slider-item="next"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="team" class="uk-section uk-section-primary uk-section-large">
+    <div class="uk-container">
+      <h2 class="uk-heading-small">Our Team</h2>
+
+      <div class="uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-child-width-1-5@l 
+      uk-margin-large-top uk-grid-match" data-uk-grid>
+      <div>
+      </div>
+      <div>
+          <div class="uk-card uk-card-small uk-border-medium">
+            <div class="uk-card-media-top">
+              <center><img src="./images/team/EC07.jpg" alt="Dr. Jayendra Kumar" style="max-height:200px"></center>
+            </div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title uk-margin-remove">Dr. Jayendra Kumar</h3>
+              <p class="uk-text-small uk-margin-xsmall">Programme Coordinator</p>
+              <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-margin-top">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-small uk-border-medium">
+            <div class="uk-card-media-top">
+             <center><img src="images/team/new president.jpeg" alt="Satyam Srivastava" style="max-height:200px"></center>
+            </div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title uk-margin-remove"><a href="https://www.facebook.com" target="_blank">Satyam Srivastava</a></h3>
+              <p class="uk-text-small uk-margin-xsmall">President</p>
+              <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-margin-top">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-card uk-card-small uk-border-medium">
+            <div class="uk-card-media-top">
+             <center><img src="images/team/vice president.jpeg" alt="M.N.V.S.K. Pavan" style="max-height:200px"></center>
+            </div>
+            <div class="uk-card-body">
+              <h3 class="uk-card-title uk-margin-remove"><a href="https://www.facebook.com/" target="_blank">M.N.V.S.K. Pavan</a></h3>
+              <p class="uk-text-small uk-margin-xsmall">Vice President</p>
+              <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-margin-top">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+        </div><div>
+        </div>
+        <div></div>
+        <div>
+          <div class="uk-card uk-card-small uk-card-body uk-border-medium uk-flex uk-flex-column">
+            <h3 class="uk-margin-remove uk-text-uppercase uk-h5 uk-letter-spacing-small"><a href="complete-list.pdf" target="_blank">View
+                Team<span class="uk-margin-left" data-uk-icon="arrow-right"></span></a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contact" class="uk-section uk-section-large">
+    <div class="uk-container">
+      <div class="uk-child-width-1-2@s" data-uk-grid>
+        <div>
+          <div>
+            <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small">Let's talk</h3>
+            <h2 class="uk-heading-small uk-margin-medium-top">Contact</h2>
+            <p class="uk-width-4-5@l" align="justify">Since inception of the NSS in the year 1969, the number of
+              students strength increased from 40,000 to over 3.8 million up to the end of March 2018 students in
+              various universities, colleges and Institutions of higher learning have volunteered to take part in
+              various community service programmes.</p>
+            <div class="uk-margin-medium-top uk-h4 uk-letter-spacing-small">
+              <div>Phone: <a class="uk-link-border uk-link-border-bold" href="tel:+91-7369077281">+91-7369077281</a><a class="uk-link-border uk-link-border-bold" href="tel:+91-9140554849"> | +91-9140554849</a></div>
+              <div class="uk-margin-top">Email: <a class="uk-link-border uk-link-border-bold" href="mailto:nss@nitjsr.ac.in">nss@nitjsr.ac.in</a></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="uk-padding uk-background-primary-light uk-light uk-box-shadow-large bg-secondary" data-uk-scrollspy="cls: uk-animation-slide-bottom; repeat: true; delay: 100">
+            <h3 class="uk-text-uppercase uk-h5 uk-letter-spacing-small">Send us a message </h3>
+            <form class="uk-grid-small uk-margin-medium-top" data-uk-grid action="formprocess.php" method="POST">
+              <div class="uk-width-1-1">
+                <input class="uk-input uk-form-large" type="text" placeholder="Full Name" id="name">
+              </div>
+              <div class="uk-width-1-1">
+                <input class="uk-input uk-form-large" type="email" placeholder="Email Address" id="email">
+              </div>
+              <div class="uk-width-1-1">
+                <select class="uk-select uk-form-large" id="reason" id="msg_subject">
+                  <option value="" selected disabled hidden>Reason for Contact</option>
+                  <option value="General Query">General Query</option>
+                  <option value="Idea For Think Tank">Idea for Think Tank</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="uk-width-1-1">
+                <textarea class="uk-textarea uk-form-large" rows="5" placeholder="Message" id="message"></textarea>
+              </div>
+              <div class="uk-width-1-1">
+                <button class="uk-button uk-button-large uk-button-primary" id="form-submit">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="uk-section uk-section-primary uk-border-large-top">
+    <div class="uk-container">
+      <div class="uk-child-width-1-2@m" data-uk-grid>
+        <div>
+          <div class="uk-child-width-expand@s" data-uk-grid data-uk-scrollspy-nav="closest: div; scroll: true; offset: 100">
+            <div>
+              <h5 class="uk-text-uppercase uk-letter-spacing-small"><a href="https://www.nitjsr.ac.in" target="_blank">NIT JSR</a></h5>
+            </div>
+            <div>
+              <h5 class="uk-text-uppercase uk-letter-spacing-small"><a href="https://www.nss.gov.in" target="_blank">NSS</a></h5>
+            </div>
+            <div>
+              <h5 class="uk-text-uppercase uk-letter-spacing-small"><a href="https://www.indianredcross.org/ircs/index.php" target="_blank">IRCS</a></h5>
+            </div>
+            <div>
+              <h5 class="uk-text-uppercase uk-letter-spacing-small"><a href="https://yas.nic.in/hi" target="_blank">YAS</a></h5>
+            </div>
+            <div>
+              <h5 class="uk-text-uppercase uk-letter-spacing-small"><a href="docs/NSS2020Newsletter.pdf" target="_blank">YEARBOOK</a></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="uk-child-width-expand@s uk-flex uk-flex-bottom" data-uk-grid>
+        <div>
+          <div>
+            <a href="#" class="uk-logo uk-margin-medium-top uk-display-inline-block">N.S.S | NIT Jamshedpur</a>
+            <p class="uk-margin-remove"> &copy; <a href="webteam.html">NSS Web Team</a></p>
+          </div>
+        </div>
+        <div>
+          <div class="uk-padding uk-padding-remove-vertical">
+            <div data-uk-grid class="uk-child-width-auto uk-grid-small">
+              <div class="uk-first-column">
+                <a href="https://www.facebook.com/nssnitjamshedpur" data-uk-icon="icon: facebook; ratio: 1.2" class="uk-icon-link uk-icon" target="_blank"></a>
+              </div>
+
+              <div>
+                <a href="#" data-uk-icon="icon: twitter; ratio: 1.2" class="uk-icon-link uk-icon" target="_blank"></a>
+              </div>
+              <div>
+                <a href="mailto:nss@nitjsr.ac.in" data-uk-icon="icon: mail; ratio: 1.2" class="uk-icon-link uk-icon" target="_blank"></a>
+              </div>
+              <div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="offcanvas" data-uk-offcanvas="flip: true; overlay: true">
+    <div class="uk-offcanvas-bar">
+      <a class="uk-logo" href="index.html">Main Menu</a>
+      <button class="uk-offcanvas-close" type="button" data-uk-close="ratio: 1.2"></button>
+      <ul class="uk-nav uk-nav-primary uk-nav-offcanvas uk-margin-medium-top uk-text-center" data-uk-scrollspy-nav="closest: li; scroll: true; offset: 80">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Events</a></li>
+        <!--      <li><a href="#services">Services</a></li>-->
+
+        <li><a href="#team">Team</a></li>
+        <!--      <li><a href="#clients">Clients</a></li>-->
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="verify.html">Certificate</a></li>
+      </ul>
+      <div class="uk-margin-medium-top uk-text-center">
+        <div data-uk-grid class="uk-child-width-auto uk-grid-small uk-flex-center">
+          <div>
+            <a href="https://twitter.com/" data-uk-icon="icon: twitter" class="uk-icon-link" target="_blank"></a>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/nssnitjamshedpur" data-uk-icon="icon: facebook" class="uk-icon-link" target="_blank"></a>
+          </div>
+          <div>
+            <a href="mailto:nss@nitjsr.ac.in" data-uk-icon="icon: mail" class="uk-icon-link" target="_blank"></a>
+          </div>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
